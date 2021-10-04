@@ -1,0 +1,5 @@
+package com.algaworsks.Cadastro.model;
+
+public class Cliente {
+
+}

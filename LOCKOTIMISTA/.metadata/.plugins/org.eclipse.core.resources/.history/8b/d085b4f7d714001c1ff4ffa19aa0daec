@@ -1,0 +1,8 @@
+package algaworks;
+
+public class Snippet {
+	public static void main(String[] args) {
+		entityManager
+	}
+}
+

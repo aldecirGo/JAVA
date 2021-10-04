@@ -1,0 +1,10 @@
+package com.web.tornese.SpringWeb.repositorys;
+import com.web.tornese.SpringWeb.models.Administrator;
+import org.springframework.data.repository.CrudRepository;
+
+public interface AdminitratorRepository extends CrudRepository<Administrator, Integer> {
+
+}
+public interface LoginRepository extends CrudRepository<Administrator, Integer> {
+
+}

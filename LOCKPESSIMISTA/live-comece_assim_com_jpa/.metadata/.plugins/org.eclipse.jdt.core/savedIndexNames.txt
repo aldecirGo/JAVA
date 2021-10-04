@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+D:\JPA_AJGAWORKS\PASTA004\live-comece_assim_com_jpa_pessimista\.metadata\.plugins\org.eclipse.jdt.core
+368130480.index
+2802540313.index

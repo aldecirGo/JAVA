@@ -1,0 +1,29 @@
+package com.web.tornese.SpringWeb.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.web.tornese.SpringWeb.models.Administrator;
+import com.web.tornese.SpringWeb.repositorys.AdminitratorRepository;
+
+@Controller
+public class LoginController {
+	
+ @Autowired
+ private AdminitratorRepository repo;
+   
+  @GetMapping("/login")
+  public String index(){
+	  return "login/index";
+  }
+  
+  @GetMapping("/logar")
+  public String index(Model model, Administrator admParam, String remember){
+	  Administrator adm = this.repo.Lo
+	  model.addAttribute("nome", "Danilo");
+	  return "login/index";
+  }
+  
+}

@@ -1,0 +1,16 @@
+#cls{
+	display: flex;
+	align-items: center;
+	column-gap: 20px;
+}
+#cls h6{
+	position: absolute;
+	justify-self: flex-end;
+	width: 100%;
+	text-align-last: center;
+	left: 0;
+}
+#cls a{
+	
+	justify-items: end;
+}

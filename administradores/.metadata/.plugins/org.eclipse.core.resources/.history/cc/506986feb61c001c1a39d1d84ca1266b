@@ -1,0 +1,11 @@
+package com.web.tornese.SpringWeb.repositorys;
+import com.web.tornese.SpringWeb.models.Administrator;
+import com.web.tornese.SpringWeb.models.Login;
+
+import org.springframework.data.repository.CrudRepository;
+
+
+public interface LoginRepository extends CrudRepository<Login, Integer> {
+
+}
+

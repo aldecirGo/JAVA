@@ -1,0 +1,73 @@
+package sistemausuarios;
+
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import com.algaworsks.Cadastro.model.Cliente;
+
+import javax.persistence.EntityManager;
+
+public class Exemplo {
+
+	public static void main(String[] args) {
+		
+		EntityManagerFactory entityManagerFactory = 
+					Persistence.createEntityManagerFactory("Clientes-PU");
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		
+		
+		/* Consultar no banco */
+		boolean b = false;
+		if (b) {
+			Cliente c = entityManager.find(Cliente.class,  1);
+			System.out.println(c.getNome());
+		}
+		if (!b) {
+			Cliente c1 = new  Cliente();
+			c1.setNome("João 2");
+			entityManager.getTransaction().begin();
+			entityManager.merge(c1);
+			entityManager.getTransaction().commit();
+		}
+		if (b) {
+			Cliente c2 =  entityManager.find(Cliente.class,  3);
+			entityManager.getTransaction().begin();
+			entityManager.remove(c2);
+			entityManager.getTransaction().commit();
+		}	
+		if (b) {
+			Cliente c3 = entityManager.find(Cliente.class,  4); //Busca gerenciada
+			System.out.println(c3.getNome());
+			c3.setNome("É o João mesmo!");			
+			entityManager.getTransaction().begin();
+			entityManager.merge(c3);
+			entityManager.getTransaction().commit();			
+		}
+		if (!b) {
+			
+			Cliente c4 = new Cliente();
+			c4.setNome("Construtora medeiros");
+			System.out.println(c4.getNome());
+			
+			entityManager.getTransaction().begin();
+			entityManager.merge(c4);
+			entityManager.getTransaction().commit();
+			
+			
+			Cliente c1 = new  Cliente();
+			c1.setNome("João 2");
+			entityManager.getTransaction().begin();
+			entityManager.merge(c1);
+			entityManager.getTransaction().commit();
+				
+		}
+			
+		
+		entityManager.close();
+		entityManagerFactory.close();
+		// TODO Auto-generated method stub
+		System.exit(0);
+
+	}
+
+}

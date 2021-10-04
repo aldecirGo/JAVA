@@ -1,0 +1,26 @@
+package algaworks.copy.copy;
+
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+
+import javax.persistence.EntityManager;
+
+public class Exemplo {
+
+	public static void main(String[] args) {
+		
+		EntityManagerFactory entityManagerFactory = 
+					Persistence.createEntityManagerFactory("Clientes-PU");
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		
+		
+		
+		entityManager.close();
+		entityManagerFactory.close();
+		// TODO Auto-generated method stub
+		System.exit(0);
+
+	}
+
+}

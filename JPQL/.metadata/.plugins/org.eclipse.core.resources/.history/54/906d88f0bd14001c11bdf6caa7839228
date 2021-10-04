@@ -1,0 +1,12 @@
+package com.algaworsks.Cadastro.model;
+
+public class Exemplo {
+	
+	private em = new EntityMan
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

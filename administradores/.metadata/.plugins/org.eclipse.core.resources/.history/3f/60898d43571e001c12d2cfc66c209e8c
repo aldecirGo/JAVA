@@ -1,0 +1,36 @@
+package com.web.tornese.SpringWeb.controllers;
+import com.web.tornese.SpringWeb.models.Administrator;
+import com.web.tornese.SpringWeb.repositorys.AdminitratorRepository;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class AdminstratorController {
+  @Autowired
+  private AdminitratorRepository  adminitratorRepository;
+	
+  @GetMapping("/administrators")
+  public String index(Model model){
+	  List<Administrator> administrator = (List<Administrator>) adminitratorRepository.findAll();
+	  model.addAttribute("administrators", administrator);
+	  return "administrators/index";
+  }
+  
+  @GetMapping("/administrators/new")
+  public String admNew(){
+	  return "administrators/new";
+  }
+  
+  @GetMapping("/administrators/create")
+  public String admCreate(Administrator adm){
+	  
+	  adminitratorRepository.save(adm);
+	  return "administrators/new";
+  }
+  
+}

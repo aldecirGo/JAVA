@@ -1,0 +1,12 @@
+#cls{
+	display: flex;
+	align-items: center;
+	column-gap: 20px;
+}
+#cls h6{
+	justify-self: flex-end;
+	width: 100%;
+	height: 100%;
+	text-align-last: center;
+	border: 1px solid red;
+}

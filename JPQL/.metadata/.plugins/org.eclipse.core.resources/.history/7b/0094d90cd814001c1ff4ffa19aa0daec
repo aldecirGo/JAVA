@@ -1,0 +1,27 @@
+package algaworks.copy;
+
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+
+import javax.persistence.EntityManager;
+
+public class ConsultasComJPQL {
+
+	public static void main(String[] args) {
+		
+		EntityManagerFactory entityManagerFactory = 
+					Persistence.createEntityManagerFactory("Clientes-PU");
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		
+		primeiraConsulta(entityManager);
+		
+		entityManager.close();
+		entityManagerFactory.close();
+		System.exit(0);
+	}
+	public static void primeiraConsulta(EntityManager entityManagem) {
+		
+	}
+
+}
